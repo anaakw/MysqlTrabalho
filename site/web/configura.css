@@ -1,0 +1,38 @@
+             *{
+                margin: 0 auto
+            }
+            header {
+                width: 90%;
+                background-color: #5741bd;
+                padding: 10px;
+            }
+            nav {
+                width: 90%;
+                background-color: #5741bd;
+                padding: 10px;
+                display: flex;
+                align-items: center;
+            }
+            nav a {
+                color: white;
+                text-decoration: none;
+            }
+            nav a:hover{
+                color: #24c0eb;
+            }
+            main{
+                width: 90%;
+                height: 500px;
+                padding: 10px;
+                background-color: #5741bd;
+            }
+            footer {
+                width: 90%;
+                padding: 10px;
+                background-color: #5741bd;
+            }
+            iframe{
+                border:0px;
+                width:100%;
+                height: 500px;
+            }

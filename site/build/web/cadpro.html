@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos</title>
+    <style>
+        /* Resetando margens e preenchimentos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilo geral da página */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Container do formulário */
+        .form-container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        /* Título */
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* Estilo do campo de entrada */
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: #f9f9f9;
+        }
+
+        /* Estilo do botão de envio */
+        input[type="submit"] {
+            width: 100%;
+            padding: 14px;
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            font-size: 18px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Efeito de hover no botão de envio */
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        /* Estilo do texto e do rótulo */
+        label {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 8px;
+            display: block;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        /* Estilo das mensagens de erro ou sucesso */
+        .message {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #e74c3c;
+        }
+
+        .success {
+            color: #27ae60;
+        }
+
+        /* Responsividade */
+        @media (max-width: 600px) {
+            .form-container {
+                padding: 20px;
+            }
+            input[type="text"], input[type="submit"] {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>Cadastro de Produtos</h1>
+        <form method="post" action="salvar_produtos.jsp">
+            <p>
+                <label for="codigo">Código:</label>
+                <input type="text" name="codigo" id="codigo" required>
+            </p>
+            <p>
+                <label for="nome">Nome do Produto:</label>
+                <input type="text" name="nome" id="nome" size="50" maxlength="50" required>
+            </p>
+            <p>
+                <label for="marca">Marca:</label>
+                <input type="text" name="marca" id="marca" size="50" maxlength="50" required>
+            </p>
+            <p>
+                <label for="preco">Preço:</label>
+                <input type="text" name="preco" id="preco" required>
+            </p>
+            <p>
+                <input type="submit" value="Salvar">
+            </p>
+        </form>
+    </div>
+
+</body>
+</html>

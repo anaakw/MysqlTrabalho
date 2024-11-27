@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exclusão de Produtos</title>
+    <style>
+        /* Resetando margens e preenchimentos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilo geral da página */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Container principal do formulário */
+        .form-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        /* Título */
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* Estilo do campo de entrada */
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        /* Estilo do botão de envio */
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            font-size: 18px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Efeito no botão ao passar o mouse */
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        /* Estilo do texto do formulário */
+        label {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        /* Estilo de mensagens de erro ou sucesso */
+        .message {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #e74c3c;
+        }
+        .success {
+            color: #27ae60;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>Excluir Produto</h1>
+        <form method="get" action="excpro.jsp">
+            <label for="cod">Código do Produto</label>
+            <input id="cod" type="number" name="codigo" required placeholder="Digite o código do produto">
+            <input type="submit" value="Excluir Produto">
+        </form>
+        <!-- Mensagens de erro ou sucesso podem ser mostradas aqui -->
+        <div class="message">
+            <!-- Exemplo de mensagem: -->
+            <!-- <span class="success">Produto excluído com sucesso!</span> -->
+            <!-- <span>Erro ao excluir produto: Produto não encontrado.</span> -->
+        </div>
+    </div>
+
+</body>
+</html>
